@@ -7,11 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-
+int calcExp (int val, int exp){
+    int result = 1;
+    int i=0;
+    for (i=0; i<exp; i++){
+        result = result * val;
+    
+    }
+    return result;
+}
+float calcArea (int radius){
+    int radiussquared = calcExp (radius,2);
+    return 3.14 * (float) radiussquared;
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        float something = calcArea(2);
+        
+        NSLog(@"%f",something);
+              
     }
     return 0;
 }
